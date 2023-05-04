@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/animals"
+        android:layout_width="match_parent"
+        android:layout_height="169dp"
+        android:layout_marginTop="5dp"
+        app:srcCompat="@drawable/animals" />
+
+    <TextView
+        android:layout_width="425dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:background="#1d6d86"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="Animals Quiz"
+        android:textColor="#effaf6"
+        android:textSize="30dp"
+
+        />
+
+    <TextView
+        android:layout_width="5250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:background="#fed361"
+
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="for grade 1"
+        android:textSize="20dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/numOfQ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:background="#1d6d86"
+                android:text="Q1"
+                android:textColor="#effaf6"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/question"
+                android:layout_width="315dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:background="#c2d7d0"
+                android:gravity="center"
+                android:text="panda can . . . the tree"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/firstImg"
+            android:layout_width="wrap_content"
+            android:layout_height="129dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/panda" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="176dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:layout_width="250dp"
+                android:layout_height="170dp">
+
+                <RadioButton
+                    android:id="@+id/op1"
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#e8b665"
+
+                    android:text="run"
+                    />
+
+                <RadioButton
+                    android:id="@+id/op2"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#e8b665"
+                    android:text="climb" />
+
+                <RadioButton
+                    android:id="@+id/op3"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#e8b665"
+                    android:text="swim"
+
+                    />
+
+                <RadioButton
+                    android:id="@+id/op4"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#e8b665"
+                    android:text="swing" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="#1d6d86"
+            android:layout_width="395dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="Score "
+                android:textColor="#effaf6"
+                android:textSize="25dp" />
+
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:backgroundTint="#5dca36"
+                android:onClick="buttonClick"
+                android:text="next" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="result"
+            android:textSize="15dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
