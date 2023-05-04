@@ -84,7 +84,6 @@ public class MainActivity extends AppCompatActivity {
                             Toast.makeText(MainActivity.this, "No more questions", Toast.LENGTH_SHORT).show();
                         }
                     }//////
-
                 }
         ); //
     }
@@ -95,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
         radioButton2 = (RadioButton) findViewById(R.id.op2);
         radioButton3 = (RadioButton) findViewById(R.id.op3);
         radioButton4 = (RadioButton) findViewById(R.id.op4);
+
         radioButton1.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
@@ -102,8 +102,10 @@ public class MainActivity extends AppCompatActivity {
                         radioButton2.setEnabled(false);
                         radioButton3.setEnabled(false);
                         radioButton4.setEnabled(false);
+                        radioButton1.setEnabled(false);
                         getRightAnswerOf(radioButton1.getText().toString());
                         btnNext.setEnabled(true);
+                        radioButton1.setTextColor(Color.BLACK);
 
                     }
                 }
@@ -112,12 +114,13 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View f) {
-                        radioButton1.setEnabled(false);
+                        radioButton2.setEnabled(false);
                         radioButton3.setEnabled(false);
                         radioButton4.setEnabled(false);
+                        radioButton1.setEnabled(false);
                         getRightAnswerOf(radioButton2.getText().toString());
                         btnNext.setEnabled(true);
-
+                        radioButton2.setTextColor(Color.BLACK);
                     }
                 }
         );//
@@ -125,11 +128,14 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View f) {
-                        radioButton1.setEnabled(false);
                         radioButton2.setEnabled(false);
+                        radioButton3.setEnabled(false);
                         radioButton4.setEnabled(false);
+                        radioButton1.setEnabled(false);
                         getRightAnswerOf(radioButton3.getText().toString());
                         btnNext.setEnabled(true);
+                        radioButton3.setTextColor(Color.BLACK);
+
 
                     }
                 }
@@ -138,12 +144,13 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View f) {
-                        radioButton1.setEnabled(false);
                         radioButton2.setEnabled(false);
                         radioButton3.setEnabled(false);
+                        radioButton4.setEnabled(false);
+                        radioButton1.setEnabled(false);
                         getRightAnswerOf(radioButton4.getText().toString());
                         btnNext.setEnabled(true);
-
+                        radioButton4.setTextColor(Color.BLACK);
                     }
                 }
         );

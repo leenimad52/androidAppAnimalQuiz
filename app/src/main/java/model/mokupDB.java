@@ -51,14 +51,6 @@ public class mokupDB implements animalDa {
         return null;
     }
 
-
-
-    @Override
-    public void printList()
-    {
-
-        System.out.println(animal.toString()+"\n");
-    }
     @Override
     public String[] getNextOptions(int currentIndex) {
       //  int nextIndex = currentIndex + 1;
