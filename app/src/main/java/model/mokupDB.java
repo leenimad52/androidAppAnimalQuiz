@@ -40,6 +40,22 @@ public class mokupDB implements animalDa {
 
 
     @Override
+    public String getFirtsQuestion(){
+        return animal.get(0).getAnimalQ();
+    }
+    @Override
+    public String getFirtsNumOfQuestion(){
+        return animal.get(0).getNumOfQ();
+    }
+    @Override
+    public String getFirtsAnswer(){
+        return animal.get(0).getAnswer();
+    }
+    @Override
+    public String[] getFirtsOptions(){
+        return animal.get(0).getOptions();
+    }
+    @Override
     public String getRightAnswer(String numOfQ) {
         for (Animal element : animal)
         {

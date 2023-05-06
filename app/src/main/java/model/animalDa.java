@@ -9,5 +9,9 @@ public interface animalDa {
     String getNextQuestion();
     String getNextNumOfQ();
     int getAnimalListSize();
+    public String getFirtsQuestion();
+    public String getFirtsNumOfQuestion();
+    public String getFirtsAnswer();
+    public String[] getFirtsOptions();
 
 }

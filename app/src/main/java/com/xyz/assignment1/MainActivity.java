@@ -50,6 +50,9 @@ public class MainActivity extends AppCompatActivity {
         radioButton2 = findViewById(R.id.op2);
         radioButton3 = findViewById(R.id.op3);
         radioButton4 = findViewById(R.id.op4);
+        numOfQ.setText(objAnimal.getFirtsNumOfQuestion());
+        question.setText(objAnimal.getFirtsQuestion());
+        getFirstOptions();
     }
 
     ///////////////////////////////////////////////////////////////////////////
@@ -104,9 +107,7 @@ public class MainActivity extends AppCompatActivity {
                         radioButton4.setEnabled(false);
                         radioButton1.setEnabled(false);
                         getRightAnswerOf(radioButton1.getText().toString());
-                        btnNext.setEnabled(true);
                         radioButton1.setTextColor(Color.BLACK);
-
                     }
                 }
         );//
@@ -119,7 +120,6 @@ public class MainActivity extends AppCompatActivity {
                         radioButton4.setEnabled(false);
                         radioButton1.setEnabled(false);
                         getRightAnswerOf(radioButton2.getText().toString());
-                        btnNext.setEnabled(true);
                         radioButton2.setTextColor(Color.BLACK);
                     }
                 }
@@ -133,10 +133,7 @@ public class MainActivity extends AppCompatActivity {
                         radioButton4.setEnabled(false);
                         radioButton1.setEnabled(false);
                         getRightAnswerOf(radioButton3.getText().toString());
-                        btnNext.setEnabled(true);
                         radioButton3.setTextColor(Color.BLACK);
-
-
                     }
                 }
         );
@@ -149,8 +146,8 @@ public class MainActivity extends AppCompatActivity {
                         radioButton4.setEnabled(false);
                         radioButton1.setEnabled(false);
                         getRightAnswerOf(radioButton4.getText().toString());
-                        btnNext.setEnabled(true);
                         radioButton4.setTextColor(Color.BLACK);
+                        btnNext.setEnabled(true);
                     }
                 }
         );
@@ -205,6 +202,21 @@ public class MainActivity extends AppCompatActivity {
             score.setText("Score: "+score1+"\\10");
             result.setTextColor(Color.RED);
 
+        }
+    }
+
+    public void getFirstOptions() {
+
+        String[] OptionsByQuestionNo = objAnimal.getFirtsOptions();
+        if (currentQuestionIndex < objAnimal.getAnimalListSize()) {
+
+            for (String s : OptionsByQuestionNo) {
+                radioButton1.setText(OptionsByQuestionNo[0].toString());
+                radioButton2.setText(OptionsByQuestionNo[1].toString());
+                radioButton3.setText(OptionsByQuestionNo[2].toString());
+                radioButton4.setText(OptionsByQuestionNo[3].toString());
+            }
+            currentQuestionIndex++;
         }
     }
 
